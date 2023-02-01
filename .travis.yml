@@ -1,12 +1,14 @@
 language: python
 
 python:
-  - "3.6"
+  - "3.11"
+  - "3.10"
 
 cache: pip
 
 install:
-  - pip install -U pip setuptools
+  - pip install -U pip aiomysql
+  - pip install -U pip aiofiles
   - pip install -e .[ci]
 
 script:
